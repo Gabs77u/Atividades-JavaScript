@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+   <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Calcule sua nota</h1>
+        <br>
+        <label for="nota1" class="item1">Nota 1:</label><br>
+        <input type="number" id="nota1" placeholder="Insira sua nota" class="entrada" min="0" max="10" required><br><br>
+
+        <label for="nota2" class="item2">Nota 2:</label><br>
+        <input type="number" id="nota2" placeholder="Insira sua nota" class="entrada" min="0" max="10" required><br>
+
+        <br><button id="botao" class="botao">Calculando...</button>
+        <p id="resultado" class="resultado"><span id="media"></span></p>
+        <p><a href="index.html" target="_blank" class="inicial1">Retornar a Pagina Inicial</a></p>
+
+        <script>
+            let botao = document.getElementById("botao");
+            let resultado = document.getElementById("resultado");
+
+            function calcularMedia() {
+                let nota1 = parseFloat(document.getElementById("nota1").value);
+                let nota2 = parseFloat(document.getElementById("nota2").value);
+
+                let media = (nota1 + nota2) / 2;
+                document.getElementById("media").innerHTML = media.toFixed(2);
+
+                let situacao = "";
+
+                if (media >= 6) {
+                    situacao = "Aprovado";
+                    resultado.className = "azul";
+                } else {
+                    situacao = "Reprovado";
+                    resultado.className = "vermelho";
+                }
+
+                resultado.innerHTML = "Média: " + media.toFixed(2) + " - " + situacao;
+            }
+
+            botao.addEventListener("click", calcularMedia);
+        </script>
+    </div>
+</body>
+</html>
