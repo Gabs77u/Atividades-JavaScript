@@ -1,0 +1,44 @@
+head{
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgba(2, 2, 2, 0.37);
+    color: rgb(0, 0, 0);
+    border-radius:10px;
+    border: 1px solid rgb(255, 255, 255);
+    width: 400px;
+    padding: 100px;
+    margin: 400px;
+}
+.titulo1 {
+    color: rgb(255, 255, 255);
+    border-radius:10px;
+    border: 1px solid rgb(255, 255, 255);
+    font-family: system-ui;
+    font-weight:bolder;
+    text-align: center;
+    font-weight: bolder;
+}
+.subtitulo1{
+    color: rgb(255, 255, 255);
+    border-radius:10px;
+    border: 1px solid rgb(255, 255, 255);
+    font-family: system-ui;
+    font-weight:bolder;
+    text-align: center;
+    font-weight: bolder;
+}
+.formulario1{
+    color: rgb(255, 255, 255);
+    border-radius:5px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 400px;
+    padding: 0px;
+    margin: 0px;
+    font-family: system-ui;
+    font-size: small;
+    text-align:start;
+}
